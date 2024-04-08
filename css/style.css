@@ -1,0 +1,200 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #d1e8e3;
+}
+
+#main {
+    margin: 25px;
+}
+
+h1 {
+    font-size: 250%;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #000;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 125%;
+    font-family: Georgia, serif;
+    color: #000;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 110%;
+    font-family: Georgia, serif;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    line-height: 110%;
+}
+
+img {
+    border: 2px solid #505050;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+ul {
+    display: inline-block;
+    list-style-type: square;
+    margin-left: 15px;
+    font-size: 90%;
+}
+
+ol {
+    display: inline-block;
+    list-style-type: decimal;
+    margin-left: 15px;
+}
+
+footer {
+    font-size: 80%;
+    color: #505050;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.copyright {
+    font-size: 80%;
+    color: #505050;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+    list-style-type: none;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-weight: 500;
+    background-color: #e8faf6;
+    font-size: 100%;
+}
+
+nav li.active a {
+    background-color: #043638;
+    color: #e8faf6;
+    font-weight: bold;
+}
+
+nav li a:focus,
+nav li a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.gallery p {
+    font-size: 90%;
+    margin-top: -5px;
+}
+
+.skip a {
+    position: absolute;
+    left: -500px;
+    height: 25px;
+    background-color: pink;
+}
+
+.skip a:focus {
+    position: static;
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion) {
+    .gif {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    .opening {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        width: 95%;
+        background-color: white;
+    }
+
+    div>img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 250px;
+        background-color: #ffffff;
+        color: #200096;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: relative;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -45%;
+        opacity: 0;
+        transition: opacity 0.3s;
+        display: block;
+        top: -100px;
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    .tooltiptext {
+        z-index: 20;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
